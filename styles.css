@@ -249,3 +249,15 @@ footer{
   color: white;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+    padding: 60px 20px 40px;
+    justify-content: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
