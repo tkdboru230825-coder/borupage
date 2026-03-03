@@ -259,12 +259,15 @@ footer{
   }
 
   .hero h1 {
-    margin: 0;
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
   }
 
   .hero-bottom {
     margin-bottom: 20px;
   }
 }
+
 
 
