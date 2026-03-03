@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boru TKD | Taekwondo en Tlapala, Chalco Estado de México</title>
+
+    <meta name="description" content="Boru TKD es la mejor escuela de Taekwondo en Tlapala, Chalco Estado de México. Clases para niños, jóvenes y adultos. Reserva tu clase muestra gratis hoy.">
+    <meta name="keywords" content="Taekwondo en Tlapala, Escuela de Taekwondo en Chalco, Taekwondo para niños en Chalco, Clases de Taekwondo Estado de México">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="hero">
+    <h1>FORMA CAMPEONES EN BORU TKD</h1>
+    <p>La mejor escuela de Taekwondo en Tlapala, Chalco Estado de México</p>
+    <div class="hero-buttons">
+        <a href="#reserva" class="btn btn-primary">Reserva tu Clase Muestra Gratis</a>
+        <a href="https://wa.me/5210000000000" class="btn btn-outline">WhatsApp</a>
+    </div>
+</header>
+
+<section class="about fade">
+    <h2>Escuela de Taekwondo en Chalco</h2>
+    <p>En Boru TKD desarrollamos disciplina, fuerza mental y alto rendimiento competitivo. Formamos atletas con valores sólidos en Tlapala, Chalco, Estado de México.</p>
+</section>
+
+<section class="programs fade">
+    <div class="card">
+        <h3>Niños</h3>
+        <p>Confianza, disciplina y desarrollo físico.</p>
+    </div>
+    <div class="card">
+        <h3>Juvenil Competitivo</h3>
+        <p>Preparación para torneos y alto rendimiento.</p>
+    </div>
+    <div class="card">
+        <h3>Adultos</h3>
+        <p>Defensa personal y condición física.</p>
+    </div>
+</section>
+
+<section class="gallery fade">
+    <img src="Cocotitlan.jpg">
+    <img src="Cocotitlan2.jpg">
+    <img src="Cocotitlan3.jpg">
+</section>
+
+<section class="testimonials fade">
+    <div class="testimonial">
+        <p>"Excelente escuela de Taekwondo en Chalco."</p>
+    </div>
+    <div class="testimonial">
+        <p>"Ambiente competitivo y profesional."</p>
+    </div>
+</section>
+
+<section class="map fade">
+    <h2>Ubicación</h2>
+    <p>Tlapala, Chalco, Estado de México</p>
+    <iframe src="https://www.google.com/maps?q=Tlapala+Chalco+Estado+de+Mexico&output=embed"></iframe>
+</section>
+
+<section id="reserva" class="reserve fade">
+    <h2>Reserva tu Clase Muestra</h2>
+    <form onsubmit="event.preventDefault(); alert('¡Gracias! Te contactaremos pronto.');">
+        <input type="text" placeholder="Nombre completo" required>
+        <input type="number" placeholder="Edad" required>
+        <input type="tel" placeholder="Teléfono" required>
+        <button class="btn btn-primary">Reservar Ahora</button>
+    </form>
+</section>
+
+<footer>
+    <p>Boru TKD | Escuela de Taekwondo en Tlapala, Chalco Estado de México</p>
+    <p>© 2026 Todos los derechos reservados</p>
+</footer>
+
+<a href="https://wa.me/525661892255" class="whatsapp">💬</a>
+
+<script>
+    const faders = document.querySelectorAll('.fade');
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold:0.3 });
+
+    faders.forEach(fader=>{
+      appearOnScroll.observe(fader);
+    });
+</script>
+
+</body>
+</html>
