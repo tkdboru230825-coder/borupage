@@ -4,168 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Boru TKD | Taekwondo en Tlapala, Chalco Estado de México</title>
+    <title>Boru TKD | Taekwondo en Tlapala, Chalco</title>
+    <meta name="description" content="Boru TKD es la mejor escuela de Taekwondo en Tlapala, Chalco Estado de México. Reserva tu clase muestra gratis.">
 
-    <meta name="description" content="Boru TKD es la mejor escuela de Taekwondo en Tlapala, Chalco Estado de México. Clases para niños, jóvenes y adultos. Reserva tu clase muestra gratis hoy.">
-    <meta name="keywords" content="Taekwondo en Tlapala, Escuela de Taekwondo en Chalco, Taekwondo para niños en Chalco, Clases de Taekwondo Estado de México">
-
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        h1,h2,h3 { font-family: 'Oswald', sans-serif; }
+    </style>
+
 </head>
-<body>
+<body class="bg-gray-950 text-white">
 
-<header class="hero">
-    <h1>MENTALIDAD DE CAMPEON BORU TKD</h1>
+<!-- HERO -->
+<section class="relative h-screen flex flex-col justify-between bg-black">
 
-    <div class="hero-bottom">
-        <p>La mejor escuela de Taekwondo en Tlapala, Chalco Estado de México</p>
-        <div class="hero-buttons">
-            <!-- <a href="#reserva" class="btn btn-primary">Reserva tu Clase Muestra Gratis</a>
-            <a href="https://wa.me/525661892255" class="btn btn-outline">WhatsApp</a> -->
-            <a href="https://wa.me/525661892255?text=Hola%20quiero%20programar%20una%20clase%20muestra%20gratis%20en%20Boru%20TKD" class="btn btn-primary">Reserva tu clase Muestra</a>
+    <div class="absolute inset-0">
+        <img src="Cocotitlan3.jpg" class="w-full h-full object-cover opacity-40">
+    </div>
+
+    <div class="relative z-10 text-center pt-16 px-6">
+        <h1 class="text-3xl md:text-6xl font-bold tracking-wider">
+            MENTALIDAD DE CAMPEÓN
+        </h1>
+    </div>
+
+    <div class="relative z-10 text-center pb-20 px-6">
+        <p class="text-lg md:text-2xl mb-6">
+            La mejor escuela de Taekwondo en Tlapala, Chalco Estado de México
+        </p>
+
+        <a href="https://wa.me/525661892255?text=Hola%20quiero%20programar%20una%20clase%20muestra%20gratis%20en%20Boru%20TKD"
+           class="bg-red-600 hover:bg-red-700 transition px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+            Reserva tu Clase Muestra
+        </a>
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="py-20 px-6 text-center max-w-4xl mx-auto">
+    <h2 class="text-4xl mb-6">Escuela de Taekwondo en Chalco</h2>
+    <p class="text-gray-300 text-lg">
+        En Boru TKD desarrollamos disciplina, fuerza mental y alto rendimiento competitivo.
+        Formamos atletas con valores sólidos en Tlapala, Chalco, Estado de México.
+    </p>
+</section>
+
+<!-- PROGRAMAS -->
+<section class="py-20 bg-gray-900 px-6">
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+        <div class="bg-gray-800 p-8 rounded-2xl hover:scale-105 transition">
+            <h3 class="text-2xl mb-4">Niños</h3>
+            <p class="text-gray-400">Confianza, disciplina y desarrollo físico.</p>
         </div>
-    </div>
-</header>
 
-<section class="about fade">
-    <h2>Escuela de Taekwondo en Chalco</h2>
-    <p>En Boru TKD desarrollamos disciplina, fuerza mental y alto rendimiento competitivo. Formamos atletas con valores sólidos en Tlapala, Chalco, Estado de México.</p>
-</section>
+        <div class="bg-gray-800 p-8 rounded-2xl hover:scale-105 transition">
+            <h3 class="text-2xl mb-4">Juvenil Competitivo</h3>
+            <p class="text-gray-400">Preparación para torneos y alto rendimiento.</p>
+        </div>
 
-<section class="programs fade">
-    <div class="card">
-        <h3>Niños</h3>
-        <p>Confianza, disciplina y desarrollo físico.</p>
-    </div>
-    <div class="card">
-        <h3>Juvenil Competitivo</h3>
-        <p>Preparación para torneos y alto rendimiento.</p>
-    </div>
-    <div class="card">
-        <h3>Adultos</h3>
-        <p>Defensa personal y condición física.</p>
+        <div class="bg-gray-800 p-8 rounded-2xl hover:scale-105 transition">
+            <h3 class="text-2xl mb-4">Adultos</h3>
+            <p class="text-gray-400">Defensa personal y condición física.</p>
+        </div>
+
     </div>
 </section>
 
-<section class="gallery fade">
-    <img src="Cocotitlan3.jpg">
-</section>
+<!-- GALERÍA MODERNA -->
+<section class="py-20 px-6">
+    <h2 class="text-4xl text-center mb-12">Galería Boru TKD</h2>
 
-<section class="testimonials fade">
-    <div class="testimonial">
-        <p>"Excelente escuela de Taekwondo en Chalco."</p>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+
+        <img src="1.jpg" class="rounded-xl cursor-pointer hover:scale-105 transition">
+        <img src="2.jpg" class="rounded-xl cursor-pointer hover:scale-105 transition">
+        <img src="3.jpg" class="rounded-xl cursor-pointer hover:scale-105 transition">
+        <img src="4.jpg" class="rounded-xl cursor-pointer hover:scale-105 transition">
+        <img src="5.jpg" class="rounded-xl cursor-pointer hover:scale-105 transition">
+        <img src="6.jpg" class="rounded-xl cursor-pointer hover:scale-105 transition">
+
     </div>
-    <div class="testimonial">
-        <p>"Ambiente competitivo y profesional."</p>
+</section>
+
+<!-- UBICACIÓN -->
+<section class="py-20 bg-gray-900 px-6 text-center">
+    <h2 class="text-4xl mb-8">Ubicación</h2>
+    <p class="mb-8 text-gray-400">Tlapala, Chalco, Estado de México</p>
+
+    <div class="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+        <iframe class="w-full h-96"
+                src="https://www.google.com/maps/embed?pb=!4v1772561019774!6m8!1m7!1sBP_vE0yle1OE6sZSPWTjnQ!2m2!1d19.24056023755904!2d-98.84536602528054!3f119.23999717404989!4f-2.2796066615422035!5f0.7820865974627469"
+                allowfullscreen="" loading="lazy"></iframe>
     </div>
 </section>
 
+<!-- RESERVA -->
+<section class="py-20 px-6 text-center max-w-xl mx-auto">
+    <h2 class="text-4xl mb-8">Reserva tu Clase Muestra</h2>
 
-<section class="modern-gallery">
-  <h2>Galería Boru TKD</h2>
+    <form class="space-y-4">
+        <input type="text" placeholder="Nombre completo"
+               class="w-full p-4 rounded-xl bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-red-600">
 
-  <div class="gallery-grid">
-    <img src="3.jpg" alt="Entrenamiento 1">
-    <img src="Cocotitlan3.jpg" alt="Entrenamiento 2">
-    <img src="1.jpg" alt="Clase infantil">
-    <img src="2.jpg" alt="Examen de cintas">
-    <img src="3.jpg" alt="Competencia">
-    <img src="4.jpg" alt="Clase infantil">
-    <img src="5.jpg" alt="Examen de cintas">
-    <img src="6.jpg" alt="Competencia">
-    <img src="AlfredoSchool.jpg" alt="Equipo Boru">
-  </div>
-</section>
+        <input type="number" placeholder="Edad"
+               class="w-full p-4 rounded-xl bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-red-600">
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-img" id="lightbox-img">
-</div>
+        <input type="tel" placeholder="Teléfono"
+               class="w-full p-4 rounded-xl bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-red-600">
 
-    <section class="map fade">
-    <h2>Ubicación</h2>
-    <p>Tlapala, Chalco, Estado de México</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!4v1772561019774!6m8!1m7!1sBP_vE0yle1OE6sZSPWTjnQ!2m2!1d19.24056023755904!2d-98.84536602528054!3f119.23999717404989!4f-2.2796066615422035!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-
-<section id="reserva" class="reserve fade">
-    <h2>Reserva tu Clase Muestra</h2>
-    <form onsubmit="event.preventDefault(); alert('¡Gracias! Te contactaremos pronto.');">
-        <input type="text" placeholder="Nombre completo" required>
-        <input type="number" placeholder="Edad" required>
-        <input type="tel" placeholder="Teléfono" required>
-        <button class="btn btn-primary">Reservar Ahora</button>
+        <button class="w-full bg-red-600 hover:bg-red-700 transition py-4 rounded-full text-lg font-semibold">
+            Reservar Ahora
+        </button>
     </form>
 </section>
 
-<footer>
+<!-- FOOTER -->
+<footer class="bg-black py-8 text-center text-gray-500">
     <p>Boru TKD | Escuela de Taekwondo en Tlapala, Chalco Estado de México</p>
     <p>© 2026 Todos los derechos reservados</p>
 </footer>
 
-<a href="https://wa.me/525661892255?text=Hola%20quiero%20programar%20una%20clase%20muestra%20gratis%20en%20Boru%20TKD" class="whatsapp">💬</a>
-
-<script>
-    const faders = document.querySelectorAll('.fade');
-    const appearOnScroll = new IntersectionObserver(function(entries, observer){
-      entries.forEach(entry=>{
-        if(!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      });
-    }, { threshold:0.3 });
-
-    faders.forEach(fader=>{
-      appearOnScroll.observe(fader);
-    });
-</script>
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/525661892255?text=Hola%20quiero%20programar%20una%20clase%20muestra%20gratis%20en%20Boru%20TKD"
+   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg text-2xl">
+    💬
+</a>
 
 </body>
-    <script>
-const images = document.querySelectorAll('.gallery-grid img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeBtn = document.querySelector('.close');
-
-images.forEach(img => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = img.src;
-  });
-});
-
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
-
-lightbox.addEventListener('click', (e) => {
-  if (e.target !== lightboxImg) {
-    lightbox.style.display = 'none';
-  }
-});
-</script>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
