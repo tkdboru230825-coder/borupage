@@ -10,6 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="videostyles.css">
 
     <style>
         body { font-family: 'Montserrat', sans-serif; }
@@ -63,47 +64,39 @@
 </section>
 
 <!-- GALERÍA DE VIDEOS -->
-<section class="py-20 px-6 bg-gray-900">
+<section class="py-20 bg-gray-900">
 
     <h2 class="text-4xl text-center mb-12">Videos Börü TKD</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <div class="video-scroll">
 
-        <video
-                class="rounded-xl shadow-lg cursor-pointer hover:scale-105 transition"
-                autoplay
-                muted
-                loop
-                playsinline
-                onclick="this.requestFullscreen()">
+        <div class="video-card">
+            <video muted loop playsinline>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+            <div class="play-btn">▶</div>
+        </div>
 
-            <source src="video3.mp4" type="video/mp4">
+        <div class="video-card">
+            <video muted loop playsinline>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+            <div class="play-btn">▶</div>
+        </div>
 
-        </video>
+        <div class="video-card">
+            <video muted loop playsinline>
+                <source src="video3.mp4" type="video/mp4">
+            </video>
+            <div class="play-btn">▶</div>
+        </div>
 
-        <video
-                class="rounded-xl shadow-lg cursor-pointer hover:scale-105 transition"
-                autoplay
-                muted
-                loop
-                playsinline
-                onclick="this.requestFullscreen()">
-
-            <source src="video3.mp4" type="video/mp4">
-
-        </video>
-
-        <video
-                class="rounded-xl shadow-lg cursor-pointer hover:scale-105 transition"
-                autoplay
-                muted
-                loop
-                playsinline
-                onclick="this.requestFullscreen()">
-
-            <source src="video3.mp4" type="video/mp4">
-
-        </video>
+        <div class="video-card">
+            <video muted loop playsinline>
+                <source src="video4.mp4" type="video/mp4">
+            </video>
+            <div class="play-btn">▶</div>
+        </div>
 
     </div>
 
@@ -238,8 +231,36 @@
    💬
 </a>
 
+
+<script>
+
+    document.querySelectorAll('.video-card').forEach(card => {
+
+    const video = card.querySelector('video')
+    const play = card.querySelector('.play-btn')
+
+    card.addEventListener('click', () => {
+
+    if(video.paused){
+
+    video.play()
+    play.style.display="none"
+
+    }else{
+
+    video.requestFullscreen()
+
+    }
+
+    })
+
+    })
+
+</script>
+
 </body>
 </html>
+
 
 
 
