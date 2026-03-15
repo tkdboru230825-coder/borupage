@@ -291,32 +291,71 @@ class="w-full h-full object-cover rounded-xl">
    💬
 </a>
 
-
 <script>
 
-    document.querySelectorAll('.video-card').forEach(card => {
+const lightbox = document.getElementById("lightbox")
+const lightboxImg = document.getElementById("lightboxImg")
+const lightboxVideo = document.getElementById("lightboxVideo")
+const closeBtn = document.getElementById("closeLightbox")
 
-    const video = card.querySelector('video')
-    const play = card.querySelector('.play-btn')
+// VIDEOS
+document.querySelectorAll('.video-card video').forEach(video => {
 
-    card.addEventListener('click', () => {
+    video.addEventListener('click', e => {
 
-    if(video.paused){
+        e.stopPropagation()
 
-    video.play()
-    play.style.display="none"
+        lightbox.classList.remove("hidden")
 
-    }else{
+        lightboxVideo.src = video.querySelector("source").src
+        lightboxVideo.classList.remove("hidden")
 
-    video.requestFullscreen()
+        lightboxImg.classList.add("hidden")
 
-    }
+        lightboxVideo.play()
 
     })
 
+})
+
+// IMÁGENES
+document.querySelectorAll('.video-card img').forEach(img => {
+
+    img.addEventListener('click', () => {
+
+        lightbox.classList.remove("hidden")
+
+        lightboxImg.src = img.src
+        lightboxImg.classList.remove("hidden")
+
+        lightboxVideo.classList.add("hidden")
+
+        lightboxVideo.pause()
+
     })
+
+})
+
+// CERRAR
+closeBtn.addEventListener("click", () => {
+
+    lightbox.classList.add("hidden")
+    lightboxVideo.pause()
+
+})
+
+// cerrar tocando fondo
+lightbox.addEventListener("click", () => {
+
+    lightbox.classList.add("hidden")
+    lightboxVideo.pause()
+
+})
 
 </script>
+
+    
+
     <!-- VISOR FULLSCREEN -->
 <div id="lightbox" class="fixed inset-0 bg-black/95 hidden items-center justify-center z-50">
 
