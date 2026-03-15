@@ -293,66 +293,30 @@ class="w-full h-full object-cover rounded-xl">
 
 <script>
 
-const lightbox = document.getElementById("lightbox")
-const lightboxImg = document.getElementById("lightboxImg")
-const lightboxVideo = document.getElementById("lightboxVideo")
-const closeBtn = document.getElementById("closeLightbox")
+    document.querySelectorAll('.video-card').forEach(card => {
 
-// VIDEOS
-document.querySelectorAll('.video-card video').forEach(video => {
+    const video = card.querySelector('video')
+    const play = card.querySelector('.play-btn')
 
-    video.addEventListener('click', e => {
+    card.addEventListener('click', () => {
 
-        e.stopPropagation()
+    if(video.paused){
 
-        lightbox.classList.remove("hidden")
+    video.play()
+    play.style.display="none"
 
-        lightboxVideo.src = video.querySelector("source").src
-        lightboxVideo.classList.remove("hidden")
+    }else{
 
-        lightboxImg.classList.add("hidden")
+    video.requestFullscreen()
 
-        lightboxVideo.play()
+    }
 
     })
 
-})
-
-// IMÁGENES
-document.querySelectorAll('.video-card img').forEach(img => {
-
-    img.addEventListener('click', () => {
-
-        lightbox.classList.remove("hidden")
-
-        lightboxImg.src = img.src
-        lightboxImg.classList.remove("hidden")
-
-        lightboxVideo.classList.add("hidden")
-
-        lightboxVideo.pause()
-
     })
-
-})
-
-// CERRAR
-closeBtn.addEventListener("click", () => {
-
-    lightbox.classList.add("hidden")
-    lightboxVideo.pause()
-
-})
-
-// cerrar tocando fondo
-lightbox.addEventListener("click", () => {
-
-    lightbox.classList.add("hidden")
-    lightboxVideo.pause()
-
-})
 
 </script>
+
 
     
 
