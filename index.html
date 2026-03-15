@@ -11,6 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="videostyles.css">
+    <link rel="manifest" href="manifest.json">
 
     <style>
         body { font-family: 'Montserrat', sans-serif; }
@@ -368,6 +369,17 @@ class="w-full h-full object-cover rounded-xl">
         class="max-w-[95%] max-h-[95%] hidden rounded-xl"></video>
 
 </div>
+
+<script>
+
+if ("serviceWorker" in navigator) {
+
+  navigator.serviceWorker.register("/service-worker.js")
+  .then(() => console.log("Service Worker registrado"));
+
+}
+
+</script>
 
 </body>
 </html>
